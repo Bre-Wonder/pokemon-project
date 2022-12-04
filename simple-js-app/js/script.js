@@ -13,11 +13,11 @@ for (let i = 0; i < pokemonList.length; i++) {
     }
 }
 
-function divide(dividend, divor) {
-    if (divisor === 0){
+function divide(dividend, divisor) {
+    if(divisor === 0){
         return 'You\'re trying to divide by zero.'
     }else{
-        let result = (dividend/divisor);
+        let result = dividend/divisor;
         return result;
     }
     }
