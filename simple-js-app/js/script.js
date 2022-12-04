@@ -5,11 +5,9 @@ let pokemonList=[
 ];
 
 for (let i = 0; i < pokemonList.length; i++) {
-    document.write(pokemonList[i].name + '\'s height is: ' + pokemonList[i].height)
+    document.write('<p>' + pokemonList[i].name + '\'s height is: ' + pokemonList[i].height + '</p>')
     if (pokemonList[i].height < .5) {
         document.write(' - You are so petite!'+ '<p></p>');
-    } else { 
-        document.write('<p></p>');
     }
 }
 
