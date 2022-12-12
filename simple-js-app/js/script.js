@@ -10,13 +10,19 @@ let pokemonList=[
     type: 'grass'},
 ];
 
-for (let i = 0; i < pokemonList.length; i++) {
-    document.write('<p>' + pokemonList[i].name + '\'s height is: ' + pokemonList[i].height + '</p>');
+//Past pokemonList for loop//
+// for (let i = 0; i < pokemonList.length; i++) {
+    //document.write('<p>' + pokemonList[i].name + '\'s height is: ' + pokemonList[i].height + '</p>');
+    //if (pokemonList[i].height < .5) {
+        //document.write(' - You are so petite!');
+    //}
+//}
+
+pokemonList.forEach(function(name) {
+    document.write('<p>' + pokemonList[i].name + '\'s height is: ' + pokemonList[i].height + '</p>'); 
     if (pokemonList[i].height < .5) {
         document.write(' - You are so petite!');
-    }
-}
-
+    });
 
 
 
