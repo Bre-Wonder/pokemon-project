@@ -18,11 +18,12 @@ let pokemonList=[
     //}
 //}
 
-pokemonList.forEach(function(name) {
-    document.write('<p>' + pokemonList[i].name + '\'s height is: ' + pokemonList[i].height + '</p>'); 
-    if (pokemonList[i].height < .5) {
+pokemonList.forEach(function(pokemon){
+    document.write('<p>' + pokemon.name + '\'s height is: ' + pokemon.height + '</p>'); 
+    if (pokemon.height < .5) {
         document.write(' - You are so petite!');
-    });
+    }
+});
 
 
 
