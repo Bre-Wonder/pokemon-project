@@ -1,7 +1,13 @@
 let pokemonList=[
-    {name: 'Squirtle', height: .5, type: 'water'},
-    {name: 'Pikachu', height: .4, type: 'electric'}, 
-    {name: 'Oddish', height: .5, type: 'grass'},
+    {name: 'Squirtle', 
+    height: .5, 
+    type: 'water'},
+    {name: 'Pikachu', 
+    height: .4, 
+    type: 'electric'}, 
+    {name: 'Oddish', 
+    height: .5, 
+    type: 'grass'},
 ];
 
 for (let i = 0; i < pokemonList.length; i++) {
@@ -10,6 +16,7 @@ for (let i = 0; i < pokemonList.length; i++) {
         document.write(' - You are so petite!');
     }
 }
+
 
 
 
