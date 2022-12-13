@@ -38,6 +38,7 @@ pokemonFunction.forEach(function(pokemon){
     if (pokemon.height < .5) {
         document.write(' - You are so petite!');
     }
+    let pokemonGo = document.querySelector('.pokemonGo');
 });
 
 
