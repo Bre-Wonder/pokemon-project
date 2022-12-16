@@ -12,6 +12,15 @@ function add(pokemon) {
 function getAll() {
     return pokemonList;
   }
+  function addListItem(pokemon) {
+    let pokemonGo = document.querySelector('.pokemonGo');
+    let eachItem = document.createElement('li');
+    let button = document.createElement('button');
+    pokemonGo.appendChild(eachItem);
+    eachItem.appendChild(button);
+    button.innerText = pokemon.name;
+    button.classList.add('buttonPoke')
+  }
 
   return {
     add: add,
@@ -34,13 +43,7 @@ for (let i = 0; i < pokemonList.length; i++) {
 let pokemonFunction = pokemonRepository.getAll();
 
 pokemonFunction.forEach(function(pokemon){
-    let pokemonGo = document.querySelector('.pokemonGo');
-    let eachItem = document.createElement('li');
-    let button = document.createElement('button');
-    pokemonGo.appendChild(eachItem);
-    eachItem.appendChild(button);
-    button.innerText = pokemon.name;
-    button.classList.add('buttonPoke')
+    
   });
 
 
