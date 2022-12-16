@@ -44,7 +44,7 @@ for (let i = 0; i < pokemonList.length; i++) {
 let pokemonFunction = pokemonRepository.getAll();
 
 pokemonFunction.forEach(function(pokemon){
-    
+    pokemonRepository.addListItem(pokemon);
   });
 
 
