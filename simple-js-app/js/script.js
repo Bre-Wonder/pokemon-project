@@ -34,12 +34,14 @@ for (let i = 0; i < pokemonList.length; i++) {
 let pokemonFunction = pokemonRepository.getAll();
 
 pokemonFunction.forEach(function(pokemon){
-    document.write('<p>' + pokemon.name + '\'s height is: ' + pokemon.height + '</p>'); 
-    if (pokemon.height < .5) {
-        document.write(' - You are so petite!');
-    }
     let pokemonGo = document.querySelector('.pokemonGo');
-});
+    let eachItem = document.createElement('li');
+    let button = document.createElement('button');
+    pokemonGo.appendChild(eachItem);
+    eachItem.appendChild(button);
+    button.innerText = pokemon.name;
+    button.classList.add('buttonPoke')
+  });
 
 
 
