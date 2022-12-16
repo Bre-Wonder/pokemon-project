@@ -1,0 +1,11 @@
+.buttonPoke {
+    background: #75E6DA;
+    padding: 10px;
+    margin: 3px, 2px;
+    cursor: pointer;
+    text-align: center;
+  }
+  buttonPoke:hover {
+   color: gray;
+   opacity: 0.50;
+  }
