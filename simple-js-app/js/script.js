@@ -20,6 +20,12 @@ function getAll() {
     eachItem.appendChild(button);
     button.innerText = pokemon.name;
     button.classList.add('buttonPoke')
+    button.addEventListener('click', function(event){
+        showDetails(event);
+    })
+  }
+  function showDetails(pokemon){
+    console.log(pokemon);
   }
 
   return {
