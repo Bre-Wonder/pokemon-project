@@ -21,7 +21,7 @@ function getAll() {
     button.innerText = pokemon.name;
     button.classList.add('buttonPoke')
     button.addEventListener('click', function(event){
-        showDetails(event);
+        showDetails(pokemon);
     })
   }
   function showDetails(pokemon){
@@ -52,6 +52,7 @@ let pokemonFunction = pokemonRepository.getAll();
 pokemonFunction.forEach(function(pokemon){
     pokemonRepository.addListItem(pokemon);
   });
+
 
 
 
