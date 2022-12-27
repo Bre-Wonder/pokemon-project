@@ -1,9 +1,5 @@
 let pokemonRepository = (function () {
-    let pokemonList = [
-      {name: 'Squirtle', height: .5, type: 'water'},
-      {name: 'Pikachu', height: .4, type: 'electric'}, 
-      {name: 'Oddish', height: .5, type: 'grass'}
-];
+    let pokemonList = [];
     
 function add(pokemon) {
     pokemonList.push(pokemon);
@@ -37,6 +33,17 @@ function getAll() {
 })();
 
 pokemonRepository.add({name: 'Vuplix', height: 0.6, type: 'fire'});
+
+// I think this is the right place for fetch()
+
+fetch('https://pokeapi.co/api/v2/pokemon/?limit=150').then(function(response){
+  return response.json();
+}).then(function (pokemonList){
+  console.log(pokemonList);
+}).catch(function(){
+  console.log('Error')
+})
+
 
 /* Past pokemonList for loop
 
