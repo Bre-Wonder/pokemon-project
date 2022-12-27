@@ -23,7 +23,7 @@ function getAll() {
   }
 
   function loadList() {
-    return fetch('https://pokeapi.co/api/v2/pokemon/?limit=150').then(function (response) {
+    return fetch(apiURL).then(function (response) {
       return response.json();
     }).then(function (json) {
       json.results.forEach(function (item) {
@@ -38,23 +38,52 @@ function getAll() {
     })
   }
 
+function loadDetails(item) {
+  let url = item.detailsUrl;
+  return fetch(url).then(function (response) {
+    return response.json();
+  }).then(function (details) {
+    item.imageUrl = details.sprites.front_default;
+    item.height = details.height;
+    item.types = details.types;
+  }).catch(function (e) {
+    console.error(e);
+  });
+ }
+
 
   function showDetails(pokemon){
-    console.log(pokemon);
+  loadDetails(pokemon).then(function () {
+      console.log(pokemon);
+  });
   }
 
   return {
     add: add,
     getAll: getAll,
     addListItem: addListItem,
-    loadList: loadList
+    loadList: loadList,
+    loadDetails: loadDetails,
+    showDetails: showDetails
   };
 
 })();
 
+
+let pokemonFunction = pokemonRepository.getAll();
+
+pokemonRepository.loadList().then(function(){
+  pokemonFunction.forEach(function(pokemon){
+      pokemonRepository.addListItem(pokemon);
+    });
+});
+
+
+
+// Placing all the unused code at the bottom
+
 // pokemonRepository.add({name: 'Vuplix', height: 0.6, type: 'fire'});
 
-// I think this is the right place for fetch()
 
 /*fetch('https://pokeapi.co/api/v2/pokemon/?limit=150').then(function(response){
   return response.json();
@@ -73,15 +102,6 @@ for (let i = 0; i < pokemonList.length; i++) {
         document.write(' - You are so petite!');
     }
 } */
-
-let pokemonFunction = pokemonRepository.getAll();
-
-pokemonRepository.loadList().then(function(){
-  pokemonFunction.forEach(function(pokemon){
-      pokemonRepository.addListItem(pokemon);
-    });
-});
-
 
 
 
