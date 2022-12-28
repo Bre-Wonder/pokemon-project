@@ -12,4 +12,7 @@
    color: gray;
    opacity: 0.50;
   }
+.liPoke {
+  list-style: none;
+}
   
