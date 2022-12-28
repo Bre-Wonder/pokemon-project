@@ -2,13 +2,13 @@ let pokemonRepository = (function () {
     let pokemonList = [];
     let apiURL = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
     
-function add(pokemon) {
-    pokemonList.push(pokemon);
-  }
+  function add(pokemon) {
+      pokemonList.push(pokemon);
+    }
 
-function getAll() {
-    return pokemonList;
-  }
+  function getAll() {
+      return pokemonList;
+    }
   function addListItem(pokemon) {
     let pokemonGo = document.querySelector('.pokemonGo');
     let eachItem = document.createElement('li');
@@ -17,6 +17,7 @@ function getAll() {
     eachItem.appendChild(button);
     button.innerText = pokemon.name;
     button.classList.add('buttonPoke')
+    eachItem.classList.add('liPoke')
     button.addEventListener('click', function(event){
         showDetails(pokemon);
     })
