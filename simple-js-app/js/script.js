@@ -52,6 +52,12 @@ function loadDetails(item) {
   });
  }
 
+ function showDetails(pokemon){
+  loadDetails(pokemon).then(function () {
+    console.log(pokemon);
+  });
+  }
+
  //selector for the div in the HTML
  let modalContainer = document.querySelector('#modalContainer');
 
@@ -64,14 +70,15 @@ function loadDetails(item) {
    let closeButtonElement = document.createElement('button');
    closeButtonElement.classList.add('modal-close');
    closeButtonElement.innterText = 'Close';
-   closeButtonElement.addEventListener('click', hideModal);
+   // closeButtonElement.addEventListener('click', hideModal); comment out for now because have not
+   // created hideModal function yet
   
    //kind of confused if this will be for the modal or the web page
    let nameElement = document.createElement('h1');
    nameElement.innerText = title;
 
-   let heightElement = document.createElementt('p');
-   heightElement.innterText = text; //if this is for the height, should this be number rather than text?
+   let heightElement = document.createElementt('integer');
+   heightElement.innterText = integer; // Is this right be it is a height value??
 
    let imageElement = document.createElement('img');
    // add images from URLs + add rest of image stuff here
@@ -85,19 +92,11 @@ function loadDetails(item) {
    modalContainer.classList.add('is-visible');
  } 
 
-document.querySelector('#modalContainer').addEventListener('click', () => {
-  showModal();
+document.querySelector('#modalContainer').addEventListener('click', (pokemon) => {
+  showModal('Pokemon Name Placeholder', 'Pokemon Height Placeholder', 'image'); // image place holder here
 });
 
 
-
-function showDetails(pokemon){
-  loadDetails(pokemon).then(function () {
-      
-
-      //console.log(pokemon); - commenting this out for now
-  });
-  }
 
   return {
     add: add,
