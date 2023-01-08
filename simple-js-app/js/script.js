@@ -70,10 +70,8 @@ function loadDetails(item) {
    let closeButtonElement = document.createElement('button');
    closeButtonElement.classList.add('modal-close');
    closeButtonElement.innterText = 'Close';
-   // closeButtonElement.addEventListener('click', hideModal); comment out for now because have not
-   // created hideModal function yet
-  
-   //kind of confused if this will be for the modal or the web page
+   // closeButtonElement.addEventListener('click', hideModal); comment out for now because have not reated hideModal function yet
+
    let nameElement = document.createElement('h1');
    nameElement.innerText = title;
 
@@ -93,7 +91,7 @@ function loadDetails(item) {
  } 
 
 document.querySelector('#modalContainer').addEventListener('click', (pokemon) => {
-  showModal('Pokemon Name Placeholder', 'Pokemon Height Placeholder', 'image'); // image place holder here
+  showModal('Pokemon Name Placeholder', 'Pokemon Height Placeholder', 'image'); // place holders here for now
 });
 
 
