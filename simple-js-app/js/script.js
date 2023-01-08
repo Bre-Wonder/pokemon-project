@@ -52,10 +52,44 @@ function loadDetails(item) {
   });
  }
 
+ //selector for the div in the HTML
+ let modalContainer = document.querySelector('#modalContainer');
+
+ function showModal(title, text, img) {
+   modalContainer.innerHTML = '';
+
+   let pokemonModal = document.createElement('div');
+   pokemonModal.classList.add('pokemonModal');
+
+   let closeButtonElement = document.createElement('button');
+   closeButtonElement.classList.add('modal-close');
+   closeButtonElement.innterText = 'Close';
+   closeButtonElement.addEventListener('click', hideModal);
+  
+   //kind of confused if this will be for the modal or the web page
+   let nameElement = document.createElement('h1';)
+   nameElement.innerText = title;
+
+   let heightElement = document.createElementt('p');
+   heightElement.innterText = text; //if this is for the height, should this be number rather than text?
+
+   let imageElement = document.createElement('img');
+   // add images from URLs + add rest of image stuff here
+
+   pokemonModal.appendChild(closeButtonElement);
+   pokemonModal.appendChild(nameElement);
+   pokemonModal.appendChild(heightElement);
+   pokemonModal.appendChild(imageElement); // Make sure that images are added correctly
+   modalContainer.appendChild(pokemonModal);
+
+   modalContainer.classList.add('is-visible');
+ } 
 
   function showDetails(pokemon){
   loadDetails(pokemon).then(function () {
-      console.log(pokemon);
+      
+
+      //console.log(pokemon); - commenting this out for now
   });
   }
 
