@@ -67,7 +67,7 @@ function loadDetails(item) {
    closeButtonElement.addEventListener('click', hideModal);
   
    //kind of confused if this will be for the modal or the web page
-   let nameElement = document.createElement('h1';)
+   let nameElement = document.createElement('h1');
    nameElement.innerText = title;
 
    let heightElement = document.createElementt('p');
@@ -85,7 +85,13 @@ function loadDetails(item) {
    modalContainer.classList.add('is-visible');
  } 
 
-  function showDetails(pokemon){
+document.querySelector('#modalContainer').addEventListener('click', () => {
+  showModal();
+});
+
+
+
+function showDetails(pokemon){
   loadDetails(pokemon).then(function () {
       
 
