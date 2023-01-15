@@ -55,6 +55,12 @@ function loadDetails(item) {
  function showDetails(pokemon){
   loadDetails(pokemon).then(function () {
     console.log(pokemon);
+
+    showModal (
+      'Pokemon Name',
+      'Pokemon Height Place holder',
+      'Image of Pokemon Place holder'
+    )
   });
   }
 
@@ -69,14 +75,14 @@ function loadDetails(item) {
 
    let closeButtonElement = document.createElement('button');
    closeButtonElement.classList.add('modal-close');
-   closeButtonElement.innterText = 'Close';
+   closeButtonElement.innerText = 'Close';
    // closeButtonElement.addEventListener('click', hideModal); comment out for now because have not reated hideModal function yet
 
    let nameElement = document.createElement('h1');
    nameElement.innerText = title;
 
-   let heightElement = document.createElementt('integer');
-   heightElement.innterText = integer; // Is this right be it is a height value??
+   let heightElement = document.createElement('text');
+   heightElement.innterText = '1'; // Place holder
 
    let imageElement = document.createElement('img');
    // add images from URLs + add rest of image stuff here
