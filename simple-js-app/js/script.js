@@ -59,7 +59,7 @@ function loadDetails(item) {
     showModal (
       pokemon.name,
       'height: ' + pokemon.height,
-      'Image of Pokemon Place holder'
+      pokemon.img
     )
   });
   }
@@ -88,7 +88,6 @@ function loadDetails(item) {
    imageElement.setAttribute('width', '100');
    imageElement.setAttribute('height', '100');
    imageElement.setAttribute('alt', 'photo of pokemon');
-   // add images from URLs + add rest of image stuff here
 
    pokemonModal.appendChild(closeButtonElement);
    pokemonModal.appendChild(nameElement);
@@ -118,11 +117,11 @@ function loadDetails(item) {
    })
    
  } 
-
+/*
 document.querySelector('#modalContainer').addEventListener('click', (pokemon) => {
   showModal('Pokemon Name Placeholder', 'Pokemon Height Placeholder', 'image'); // place holders here for now
 });
-
+*/
 
 
   return {
