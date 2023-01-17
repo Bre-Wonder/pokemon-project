@@ -57,14 +57,13 @@ function loadDetails(item) {
     console.log(pokemon);
 
     showModal (
-      'Pokemon Name',
-      'Pokemon Height Place holder',
+      pokemon.name,
+      'height: ' + pokemon.height,
       'Image of Pokemon Place holder'
     )
   });
   }
 
- //selector for the div in the HTML
  let modalContainer = document.querySelector('#modalContainer');
 
  function showModal(title, text, img) {
@@ -76,15 +75,19 @@ function loadDetails(item) {
    let closeButtonElement = document.createElement('button');
    closeButtonElement.classList.add('modal-close');
    closeButtonElement.innerText = 'Close';
-   // closeButtonElement.addEventListener('click', hideModal); comment out for now because have not reated hideModal function yet
+   closeButtonElement.addEventListener('click', hideModal);
 
    let nameElement = document.createElement('h1');
    nameElement.innerText = title;
 
-   let heightElement = document.createElement('text');
-   heightElement.innterText = '1'; // Place holder
+   let heightElement = document.createElement('p');
+   heightElement.innterText = 'text'; // Place holder
 
    let imageElement = document.createElement('img');
+   imageElement.setAttribute('src', img);
+   imageElement.setAttribute('width', '100');
+   imageElement.setAttribute('height', '100');
+   imageElement.setAttribute('alt', 'photo of pokemon');
    // add images from URLs + add rest of image stuff here
 
    pokemonModal.appendChild(closeButtonElement);
@@ -95,9 +98,25 @@ function loadDetails(item) {
 
    modalContainer.classList.add('is-visible');
 
+   
    function hideModal() {
-    pokemonModal.classList.remove('is-visilbe');
+     modalContainer.classList.remove('is-visible');
    }
+
+   
+   window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modalContainer.classList.contains('is-visible')) {
+      hideModal();
+    }    
+   });
+
+   modalContainer.addEventListener('click', (e) => {
+    let target = e.target;
+    if (target === modalContainer) {
+      hideModal();
+    }
+   })
+   
  } 
 
 document.querySelector('#modalContainer').addEventListener('click', (pokemon) => {
