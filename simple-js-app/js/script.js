@@ -55,11 +55,10 @@ function loadDetails(item) {
  function showDetails(pokemon){
   loadDetails(pokemon).then(function () {
     console.log(pokemon);
-
     showModal (
       pokemon.name,
       'height: ' + pokemon.height,
-      pokemon.img
+      pokemon.imageUrl
     )
   });
   }
@@ -80,13 +79,13 @@ function loadDetails(item) {
    let nameElement = document.createElement('h1');
    nameElement.innerText = title;
 
-   let heightElement = document.createElement('p');
-   heightElement.innterText = 'text'; // Place holder
+   let heightElement = document.createElement('h2');
+   heightElement.innerText = text;
 
    let imageElement = document.createElement('img');
    imageElement.setAttribute('src', img);
-   imageElement.setAttribute('width', '100');
-   imageElement.setAttribute('height', '100');
+   imageElement.setAttribute('width', '150');
+   imageElement.setAttribute('height', '150');
    imageElement.setAttribute('alt', 'photo of pokemon');
 
    pokemonModal.appendChild(closeButtonElement);
