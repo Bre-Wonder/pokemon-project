@@ -51,11 +51,12 @@
   margin: auto;
   display: inline-block;
   box-sizing: border-box;
-  background: #d3d3d3;
+  background: #aec39b;
   padding: 15px;
   width: 100%;
   max-width: 700px;
-  text-align: left;
+  height: 300px;
+  text-align: center;
 }
 
 .modal-close {
