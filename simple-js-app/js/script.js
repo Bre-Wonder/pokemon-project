@@ -94,6 +94,10 @@ function loadDetails(item) {
    modalContainer.appendChild(pokemonModal);
 
    modalContainer.classList.add('is-visible');
+
+   function hideModal() {
+    pokemonModal.classList.remove('is-visilbe');
+   }
  } 
 
 document.querySelector('#modalContainer').addEventListener('click', (pokemon) => {
