@@ -16,8 +16,9 @@ let pokemonRepository = (function () {
     pokemonGo.appendChild(eachItem);
     eachItem.appendChild(button);
     button.innerText = pokemon.name;
-    button.classList.add('buttonPoke')
-    eachItem.classList.add('liPoke')
+    button.classList.add('buttonPoke');
+    eachItem.classList.add('liPoke');
+    eachItem.classList.add('group-list-item');
     button.addEventListener('click', function(event){
         showDetails(pokemon);
     })
