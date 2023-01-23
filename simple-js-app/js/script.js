@@ -12,7 +12,7 @@ let pokemonRepository = (function () {
   function addListItem(pokemon) {
     let pokemonGo = document.querySelector('.pokemonGo');
     let eachItem = document.createElement('li');
-    let button = document.querySelector ('.buttonPoke')
+    let button = document.querySelector ('.buttonPoke');
     //let button = document.createElement('button');
     pokemonGo.appendChild(eachItem);
     eachItem.appendChild(button);
