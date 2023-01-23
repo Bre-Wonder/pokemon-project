@@ -107,7 +107,6 @@ function loadDetails(item) {
 
   // modalContainer.classList.add('is-visible');
 
-   //Code not currently needed
    /*function hideModal() {
      modalContainer.classList.remove('is-visible');
    }
