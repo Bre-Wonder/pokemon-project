@@ -1,3 +1,17 @@
+.searchBtn {
+  background-color: #75E6DA;
+  font-weight: bold;
+  color: black;
+  border: black;
+}
+
+.searchBtn:hover {
+  background-color: #75E6DA;
+  font-weight: bold;
+  color: white;
+  border: black;
+}
+
 .page-container {
   margin-top: 75px;
 }
@@ -29,4 +43,5 @@
   align-items: center;
   justify-content: center;
 }
+
 
