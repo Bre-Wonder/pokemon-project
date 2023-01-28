@@ -70,7 +70,6 @@ function loadDetails(item) {
  let modalContainer = document.querySelector('#modalContainer');
 
  function showModal(name, height, img) {
-   //modalContainer.innerHTML = '';
 
   let pokemonName = document.querySelector('.modal-title');
   let pokemonDetails = document.querySelector('.modal-body');
@@ -78,15 +77,6 @@ function loadDetails(item) {
 
   pokemonName.innerHTML = '';
   pokemonDetails.innerHTML = '';
-
-
-   //let pokemonModal = querySelector('.modal');
-   //pokemonModal.classList.add('pokemonModal');
-
-   /*let closeButtonElement = document.createElement('button');
-   closeButtonElement.classList.add('modal-close');
-   closeButtonElement.innerText = 'Close';
-   closeButtonElement.addEventListener('click', hideModal);*/
 
    let nameElement = document.createElement('h1');
    nameElement.innerText = name;
@@ -100,40 +90,13 @@ function loadDetails(item) {
    imageElement.setAttribute('height', '150');
    imageElement.setAttribute('alt', 'photo of pokemon');
 
-   //pokemonModal.appendChild(closeButtonElement);
    pokemonName.appendChild(nameElement);
    pokemonDetails.appendChild(heightElement);
    pokemonDetails.appendChild(imageElement); 
    
 
     modalContainer.classList.add('show');
- }
-
-   /*function hideModal() {
-     modalContainer.classList.remove('is-visible');
-   }
-
-   
-   window.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modalContainer.classList.contains('is-visible')) {
-      hideModal();
-    }    
-   });
-
-   modalContainer.addEventListener('click', (e) => {
-    let target = e.target;
-    if (target === modalContainer) {
-      hideModal();
     }
-   })*/
-   
- 
-/*
-document.querySelector('#modalContainer').addEventListener('click', (pokemon) => {
-  showModal('Pokemon Name Placeholder', 'Pokemon Height Placeholder', 'image'); // place holders here for now
-});
-*/
-
 
   return {
     add: add,
@@ -154,31 +117,6 @@ pokemonRepository.loadList().then(function(){
       pokemonRepository.addListItem(pokemon);
     });
 });
-
-
-
-// Placing all the unused code at the bottom
-
-// pokemonRepository.add({name: 'Vuplix', height: 0.6, type: 'fire'});
-
-
-/*fetch('https://pokeapi.co/api/v2/pokemon/?limit=150').then(function(response){
-  return response.json();
-}).then(function (pokemonList){
-  console.log(pokemonList);
-}).catch(function(){
-  console.log('Error')
-}*/
-
-
-/* Past pokemonList for loop
-
-for (let i = 0; i < pokemonList.length; i++) {
-    document.write('<p>' + pokemonList[i].name + '\'s height is: ' + pokemonList[i].height + '</p>');
-    if (pokemonList[i].height < .5) {
-        document.write(' - You are so petite!');
-    }
-} */
 
 
 
