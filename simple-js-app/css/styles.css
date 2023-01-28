@@ -1,3 +1,4 @@
+
 .searchBtn {
   background-color: #75E6DA;
   font-weight: bold;
@@ -26,9 +27,9 @@
     margin: 1em 0;
   }
   
-  buttonPoke:hover {
-   color: gray;
-   opacity: 0.50;
+  .buttonPoke:hover {
+   background-color: gray;
+   opacity: 0.10;
   }
 .liPoke {
   border-radius: 0;
