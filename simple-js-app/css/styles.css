@@ -1,4 +1,9 @@
 
+.searchForm {
+  text-align: right;
+  justify-content: right;
+}
+
 .searchBtn {
   background-color: #75E6DA;
   font-weight: bold;
