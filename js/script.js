@@ -58,7 +58,6 @@ function loadDetails(item) {
 
  function showDetails(pokemon){
   loadDetails(pokemon).then(function () {
-    console.log(pokemon);
     showModal(
       pokemon.name,
       'height: ' + pokemon.height,
