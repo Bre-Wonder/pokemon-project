@@ -22,7 +22,7 @@ let pokemonRepository = (function () {
     button.classList.add('btn');
     eachItem.classList.add('liPoke');
     eachItem.classList.add('group-list-item');
-    button.addEventListener('click', function(event){
+    button.addEventListener('click', function(){
         showDetails(pokemon);
     })
   }
@@ -72,7 +72,6 @@ function loadDetails(item) {
 
   let pokemonName = document.querySelector('.modal-title');
   let pokemonDetails = document.querySelector('.modal-body');
-  let modalHeader = document.querySelector('.modal-header');
 
   pokemonName.innerHTML = '';
   pokemonDetails.innerHTML = '';
