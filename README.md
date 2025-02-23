@@ -6,6 +6,12 @@ To create an application that pulled data from an external API in interactive bu
 ### Technologies Used: 
 HTML | CSS | Javascript | jQuery | Bootstrap
 
+### How to start up this project?
+
+
+### API Used:
+Pokemon API (https://pokeapi.co/api/v2/pokemon/?limit=150)
+
 ### Learning Moments: 
 (1) Learned how to write functions in Javascript (2) Parameters (3) Loop/forEach functions (4) if/else (5) asynchronous code (6) promises (7) jQuery (8) Bootstrap (9) DOM manipulation (10) Creating dynamic elements in js (11) Arrays, strings, objects
 
