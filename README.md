@@ -1,7 +1,7 @@
 # Pokemon Application
 
-### Objective: 
-To create an application that pulled data from an external API in interactive buttons on the UI.
+### Project Description: 
+To create an application that pulled data from an external API of Pokémon data using HTML, CSS, and Javascript. The application is meant to have interactive buttons on the UI to allow the user to reaveal more information about each Pokémon.
 
 ### Technologies Used: 
 HTML | CSS | Javascript | jQuery | Bootstrap
