@@ -7,7 +7,7 @@ To create an application that pulled data from an external API of Pokémon data 
 HTML | CSS | Javascript | jQuery | Bootstrap
 
 ### How to start up this project?
-
+This project is composed of a few simples files. It has an HTML, CSS, and Javascript file, `script.js`. It begins with these files and nesting them neatly. The project is developed by creating a for each loop over the data ojects of the different Pokémon charaters. There are are also styles carried through the Bootstrap libray and the use of modals for pop up details. 
 
 ### API Used:
 Pokemon API (https://pokeapi.co/api/v2/pokemon/?limit=150)
